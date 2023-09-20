@@ -1,0 +1,40 @@
+:root {
+    --light: hsl(0, 0%, 90%); /* #e6e6e6 */
+    --light--hsl: 0, 0%, 90%;
+    --light-20: hsl(var(--light--hsl), .2);
+    --light-50: hsl(var(--light--hsl), .5);
+    --light-80: hsl(var(--light--hsl), .8);
+    --dark: hsl(0, 0%, 10%); /* #1a1a1a */
+    --dark--hsl: 0, 0%, 10%;
+    --dark-20: hsl(var(--dark--hsl), .2);
+    --dark-50: hsl(var(--dark--hsl), .5);
+    --dark-80: hsl(var(--dark--hsl), .8);
+
+    --accent-color: 230;
+    --accent: hsl(var(--accent-color), 30%, 50%); /* #5966a6 */
+    --accent--hsl: var(--accent-color), 30%, 50%;
+    --accent-20: hsl(var(--accent--hsl), .2);
+    --accent-50: hsl(var(--accent--hsl), .5);
+    --accent-80: hsl(var(--accent--hsl), .8);
+    --accent-light: hsl(var(--accent-color), 100%, 80%); /* #99b9ff */
+    --accent-light--hsl: var(--accent-color), 100%, 80%;
+    --accent-light-20: hsl(var(--accent-light--hsl), .2);
+    --accent-light-50: hsl(var(--accent-light--hsl), .5);
+    --accent-light-80: hsl(var(--accent-light--hsl), .8);
+
+    /* --accent-hsl1: 230;
+    --accent-hsl2: 30%;
+    --accent-hsl3: 50%;
+    --accent: hsl(var(--accent-hsl1),var(--accent-hsl2),var(--accent-hsl3));
+    --accent--hsl: var(--accent-hsl1),var(--accent-hsl2),var(--accent-hsl3);
+    --accent-light: hsl(var(--accent-hsl1), 80%, 80%); */
+}
+
+.bg-dark {
+    /* --bg--rgb: 1; */
+    background: hsl(var(--dark--hsl));
+}
+.bg-gradient {
+    /* --bg--rgb: 1; */
+    background-image: linear-gradient(180deg, hsl(0, 0%, 100%, var(--gradient--rgb, .2)), transparent);
+}

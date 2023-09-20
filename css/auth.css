@@ -1,0 +1,31 @@
+#auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    background: var(--accent-50);
+    width: 70%;
+    height: 70%;
+    box-shadow: 0 0 15px var(--accent-light);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+}
+
+.auth-item {
+    width: 50%;
+    text-align: center;
+}
+
+.auth-item__btn {
+    background: var(--accent-light-50);
+    padding: .5em 1em;
+    border-radius: var(--radius);
+    transition: .5s;
+}
+.sign-up:hover a {
+    box-shadow: 0 0 5px var(--accent-light-50);
+}
