@@ -38,3 +38,28 @@
     /* --bg--rgb: 1; */
     background-image: linear-gradient(180deg, hsl(0, 0%, 100%, var(--gradient--rgb, .2)), transparent);
 }
+
+.accent {
+    background: var(--accent);
+}
+.accent-80 {
+    background: var(--accent-80);
+}
+.accent-50 {
+    background: var(--accent-50);
+}
+.accent-20 {
+    background: var(--accent-50);
+}
+.accent-light {
+    background: var(--accent-light);
+}
+.accent-light-80 {
+    background: var(--accent-light-80);
+}
+.accent-light-50 {
+    background: var(--accent-light-50);
+}
+.accent-light-20 {
+    background: var(--accent-light-50);
+}

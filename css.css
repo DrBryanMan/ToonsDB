@@ -31,6 +31,7 @@ main {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .status-btn {
@@ -76,22 +77,24 @@ button {
 }
 
 header {
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  height: var(--nav-height);
-  z-index: 10;
-  transition: .5s;
-  background: var(--dark);
   position: fixed;
   top: 0;
+  display: flex;
+  align-items: center;
   width: 100vw;
+  height: var(--nav-height);
+  background: var(--dark);
+  box-shadow: 2px 0 4px var(--dark);
+  backdrop-filter: blur(4px);
+  transition: .5s;
+  z-index: 10;
 }
 header.scrolled {
   background: var(--dark-20);
 }
 header:hover {
   background: var(--accent);
+  backdrop-filter: blur(10px);
 }
 
 header a,
@@ -127,6 +130,8 @@ header a,
 }
 .nav-menu {
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 .nav-menu-title {
     border-left: 1px solid #fff2;
@@ -134,55 +139,34 @@ header a,
     padding: 0 1em;
 }
 .search {
-    position: relative;
-    width: 100%;
-    display: flex;
-    max-width: 50%;
-    margin: 0 auto;
-    background: var(--light-rgb);
-    border-radius: var(--radius);
-    color: #fff5;
-    border: 1px solid var(--light-20);
-}
-.search:has(.search-area:focus) .search-label {
-    display: none;
-}
-.search-label {
-    position: absolute;
-    line-height: 2em;
-    top: 0;
-    left: 3em;
-    z-index: -1;
-}
-.search i {
-    margin: auto .5em;
-    /* float: left; */
-}
-.search-area {
-    width: 100%;
-    /* height: 100%; */
-    padding: 0 .5em;
-    border: none;
-    background: none;
-    transition: .3s;
-    border-radius: var(--radius);
-}
-.search-area:focus {
-    outline: none;
-    background: hsl(var(--light--hsl), .3);
-    color: var(--text-light);
+	width: 50%;
 }
 .nav-menu {
-    display: flex;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* width: 100%; */
-    /* background: var(--bg-light-rgb); */
+    justify-content: space-between;
 }
 .login {
-    display: flex;
-    /* align-self: flex-end; */
-    /* background: var(--bg-dark-rgb); */
-    margin: auto;
+	margin: unset;
+	margin-right: 5vw;
+/* 	line-height: 0 !important; */
+}
+
+.form-outline .form-control~.form-label  {
+	color: transparent !important;
+}
+#searchInput {
+	color: var(--light);
+}
+.form-outline .form-control~.form-notch *  {
+	border-color: var(--light-20) !important;
+	box-shadow: unset !important;
+}
+
+#searchBtn {
+	background: var(--light-20);
+}
+
+.login {
+    margin-right: 5vw;
     align-items: center;
     gap: 1em;
 }

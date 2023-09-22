@@ -1,18 +1,43 @@
-#auth-page {
-    min-height: 100vh;
+/* #auth-page {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
+.auth-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+    justify-content: center;
+    align-items: center;
+}
+.auth-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: var(--dark-80);
+	backdrop-filter: blur(2px);
+}
 .auth-container {
-    background: var(--accent-50);
-    width: 70%;
-    height: 70%;
+    position: relative;
+}
+.login-box {
+    background: var(--accent-light-80);
+    width: 70vw;
+    height: 70vh;
     box-shadow: 0 0 15px var(--accent-light);
     border-radius: var(--radius);
     display: flex;
     align-items: center;
+    transition: .5s;
+}
+.auth-container:has(.login-form-box.active) .login-box {
+    background: var(--accent-light-50);
+    box-shadow: 0 0 15px var(--accent-light);
 }
 
 .auth-item {
@@ -20,12 +45,60 @@
     text-align: center;
 }
 
-.auth-item__btn {
-    background: var(--accent-light-50);
-    padding: .5em 1em;
+
+/* LOGIN FORM */
+.login-form-box {
+    position: absolute;
+    background: var(--light);
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
     border-radius: var(--radius);
-    transition: .5s;
+    overflow: hidden;
+    transition: .3s ease-in-out;
 }
-.sign-up:hover a {
-    box-shadow: 0 0 5px var(--accent-light-50);
+.login-form-box.active {
+    left: 50%;
+}
+
+.login-form-box form {
+    position: absolute;
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--dark);
+	align-items: center;
+    justify-content: center;
+    gap: 1rem;
+/* 	border: 1px solid; */
+    width: 100%;
+    height: 100%;
+/* 	left: 0; */
+    transition: .3s ease-in-out;
+}
+
+.login-form-box .form-outline {
+/* 	width: 80%; */
+    margin: 0 auto;
+}
+
+.login-form-box.active .form-sign-in {
+    left: -150%;
+}
+.login-form-box .form-sign-in {
+    left: 0%;
+}
+.login-form-box:not(.active) .form-sign-up {
+    left: 100%;
+}
+.login-form-box.active .form-sign-up {
+    left: 0%;
+}
+.login-form-box:not(.active) .form-sign-up {
+    left: 150%;
+}
+
+#authSignInBtn {
+    background: var(--accent-light-80);
 }

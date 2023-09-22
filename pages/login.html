@@ -4,28 +4,63 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../css.css">
-        <!-- Icons -->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <!-- Fonts -->
-        <!-- MDB -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css">
+        <link rel="stylesheet" href="../css.css">
 
         <title>Toons DB</title>
     </head>
     <body class="bg-dark bg-gradient">
         <main id="auth-page">
             <article class="auth-container">
-                <section class="auth-item">
-                    <h2 class="auth-item__title">Have an account?</h2>
-                    <button class="auth-item__btn">Login</button>
-                </section>
-                <section class="auth-item">
-                    <h2 class="auth-item__title">Don't have an account?</h2>
-                    <button class="auth-item__btn">Sign up</button>
-                </section>
+                <div class="login-box">
+                    <section class="auth-item">
+                        <h2 class="auth-item__title">Have an account?</h2>
+                        <button id="authSignInBtn" class="btn btn-prime">Login</button>
+                    </section>
+                    <section class="auth-item">
+                        <h2 class="auth-item__title">Don't have an account?</h2>
+                        <button id="authSignUpBtn" class="btn btn-prime">Sign up</button>
+                    </section>
+                </div>
+                <div id="loginFormBox" class="login-form-box">
+                    <form action="#" class="form-sign-in">
+                        <h3>Login</h3>
+                        <div class="form-outline">
+                            <input type="text" id="typeEmail" name="email" class="form-control">
+                            <label class="form-label" for="typeEmail">Email</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="typePassword" name="password" class="form-control">
+                            <label class="form-label" for="typePassword">Password</label>
+                        </div>
+                        <button>Login</button>
+                    </form>
+                    <form action="#" class="form-sign-up">
+                        <h3>Registration</h3>
+                        <div class="form-outline">
+                            <input type="text" id="typeUsername" name="username" class="form-control">
+                            <label class="form-label" for="typeUsername">Username</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="text" id="typeEmail" name="email" class="form-control">
+                            <label class="form-label" for="typeEmail">Email</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="typePassword" name="password" class="form-control">
+                            <label class="form-label" for="typePassword">Password</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="typeConfirmPassword" name="confirmpassword" class="form-control">
+                            <label class="form-label" for="typeConfirmPassword">Confirm password</label>
+                        </div>
+                        <button>Registration</button>
+                    </form>
+                </div>
             </article>
         </main>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+        <script src="../js.js"></script>
     </body>
 </html>

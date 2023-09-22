@@ -19,14 +19,18 @@
             <span class="logo">Toons DB</span>
             <nav class="nav-menu">
                 <span class="nav-menu-title">Home</span>
-                <div class="search">
-                    <span class="search-label">Search</span>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="search-area" type="text">
-                </div>
+                <div class="input-group search">
+                    <div class="form-outline">
+                      <input id="searchInput" type="search" class="form-control" placeholder="Search">
+                      <!-- <label class="form-label" for="searchInput"></label> -->
+                    </div>
+                    <button id="searchBtn" type="button" class="btn btn-prime">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
                 <div class="login">
-                    <span class="sign-in"><a href="/pages/login.html">SIGN IN</a></span>
-                    <span class="sign-up"><a href="/pages/login.html">SIGN UP</a></span>
+                    <button id="signInBtn" class="btn btn-prime accent-light-50">SIGN IN</button>
+                    <!-- <span id="signUpBtn" class="sign-up"><a href="/pages/login.html">SIGN UP</a></span> -->
                 </div>
             </nav>
         </header>
@@ -49,6 +53,55 @@
                 <a href="">Amerime</a>
             </span>
         </nav>
+        <div id="authWrapper" class="auth-wrapper">
+            <div class="auth-back"></div>
+            <div class="auth-container">
+                <div class="login-box">
+                    <section class="auth-item">
+                        <h2 class="auth-item__title">Have an account?</h2>
+                        <button id="authSignInBtn" class="btn btn-prime">Login</button>
+                    </section>
+                    <section class="auth-item">
+                        <h2 class="auth-item__title">Don't have an account?</h2>
+                        <button id="authSignUpBtn" class="btn btn-prime">Sign up</button>
+                    </section>
+                </div>
+                <div id="loginFormBox" class="login-form-box">
+                    <form action="#" class="form-sign-in">
+                        <h3>Login</h3>
+                        <div class="form-outline">
+                            <input type="text" id="typeEmail" name="email" class="form-control">
+                            <label class="form-label" for="typeEmail">Email</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="typePassword" name="password" class="form-control">
+                            <label class="form-label" for="typePassword">Password</label>
+                        </div>
+                        <button class="btn btn-prime">Login</button>
+                    </form>
+                    <form action="#" class="form-sign-up">
+                        <h3>Registration</h3>
+                        <div class="form-outline">
+                            <input type="text" id="typeUsername" name="username" class="form-control">
+                            <label class="form-label" for="typeUsername">Username</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="text" id="typeEmail" name="email" class="form-control">
+                            <label class="form-label" for="typeEmail">Email</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="typePassword" name="password" class="form-control">
+                            <label class="form-label" for="typePassword">Password</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="typeConfirmPassword" name="confirmpassword" class="form-control">
+                            <label class="form-label" for="typeConfirmPassword">Confirm password</label>
+                        </div>
+                        <button class="btn btn-prime">Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <main id="main-page">
             <section class="home-block choosen-title">
                 <h3>THE MOST ANTICIPATED RELEASE!</h3>
@@ -245,6 +298,7 @@
                 </div>
             </section>
         </main>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
         <script src="js.js"></script>
     </body>
 </html>
