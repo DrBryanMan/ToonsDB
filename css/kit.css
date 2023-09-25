@@ -1,3 +1,17 @@
+.d-flex {
+    display: flex;
+}
+.jc-center {
+    justify-content: center;
+}
+.ai-center {
+    align-items: center;
+}
+.fdr-column {
+    flex-direction: column;
+}
+
+/* * * * * * * */
 .kit section {
     margin: 1em;
 }
@@ -44,20 +58,20 @@
 }
 
 /* BUTTONS */
-.btn {
+.btn-tdb{
     font-family: unset;
     font-size: 1rem;
-    padding: 10px 1rem;
+    padding: .5rem 1rem;
 	border-radius: var(--radius);
 	cursor: pointer;
 	transition: .3s;
 	outline-offset: -2px;
     color: var(--light);
 }
-a.btn {
+a.btn-tdb{
 	text-decoration: none;
 }
-.btn.small {
+.btn-tdb.small {
     padding: .25rem 1rem 5px;
 }
 .btn-prime.accent-light-50 {
@@ -66,10 +80,10 @@ a.btn {
 .btn-prime.accent-light-50:hover {
     background: var(--accent-light-80);
 }
-.btn:not(.btn-ter,[disabled]):active {
+.btn-tdb:not(.btn-ter,[disabled]):active {
     transform: scale(95%);
 }
-.btn[disabled],a.btn[disabled] {
+.btn-tdb[disabled],a.btn-tdb[disabled] {
     background: var(--accent-50);
 	cursor: default;
     color: var(--accent-light-20);
@@ -83,7 +97,7 @@ a.btn {
 	outline: 2px solid var(--accent-50);
     color: var(--accent-light);
 }
-.btn:not([disabled]).btn-sec:hover {
+.btn-tdb:not([disabled]).btn-sec:hover {
 	outline: 2px solid var(--accent-80);
     color: var(--accent-light);
 }
@@ -92,7 +106,7 @@ a.btn {
     background: var(--accent-20);
     color: var(--accent-light);
 }
-.btn:not([disabled]).btn-sec-fill:hover {
+.btn-tdb:not([disabled]).btn-sec-fill:hover {
 	outline: 2px solid var(--accent-80);
     background: var(--accent-50);
     color: var(--accent-light);

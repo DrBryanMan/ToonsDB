@@ -1,8 +1,8 @@
-authWrapper.onclick = () => {
-  loginFormBox.style.display = 'none'
+authWrapperClose.onclick = () => {
+  authWrapper.style.display = 'none'
 }
 signInBtn.onclick = () => {
-  loginFormBox.style.display = 'flex'
+  authWrapper.style.display = 'flex'
 }
 
 authSignUpBtn.onclick = () => {
