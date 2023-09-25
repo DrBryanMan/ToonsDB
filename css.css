@@ -9,6 +9,8 @@
     --border-color: 1px solid gray;
     --radius: 8px;
     --text: var(--light);
+    --link: #C39BD3;
+    --link-hover: #9B59B6;
 }
 
 * {
@@ -28,6 +30,15 @@ body {
 }
 main {
   margin: 4rem 5vw 1rem;
+}
+
+a {
+  color: var(--link);
+  transition: .3s;
+	text-decoration: none;
+}
+a:hover {
+  color: var(--link-hover);
 }
 
 button {
@@ -264,6 +275,49 @@ body:has(#article-page) #article-page {
   padding-top: 20vh;
 }
 
+/* CAROUSEL */
+.home-block.choosen-title {
+	padding: 0;
+	overflow: hidden;
+}
+.choosen-title .carousel {
+	max-height: 80vh;
+}
+.carousel-control-prev-icon:after,
+.carousel-control-next-icon:after {
+	content: '';
+}
+.carousel > button {
+	width: 5vw;
+}
+.carousel-caption {
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 5vw;
+	text-align: unset;
+}
+.carousel-caption span {
+	display: inline-block;
+	font-size: 200%;
+	background: var(--accent-light-50);
+	border-radius: var(--radius);
+	padding: .1rem 1rem .2rem;
+	margin-bottom: 1rem;
+}
+.carousel-caption img {
+	float: right;
+	width: 250px;
+	margin-left: 2rem;
+}
+.carousel-item > img {
+	filter: brightness(.5);
+}
+.choosen-title .btn-tdb {
+	margin-right: .5rem;
+}
+
+/* == TITLE == */
 /* LEFT */
 .left-section {
   /* width: 100%; */
@@ -392,13 +446,15 @@ body:has(#article-page) #article-page {
 	box-shadow: 0 0 4px 1px var(--accent-80);
 }
 
-.home-block h3 {
+.home-block > h3,
+.choosen-title h3 {
 	position: relative;
 	border-left: .5rem solid var(--accent);
 	padding-left: 1rem;
 	transition: .3s;
 }
-.home-block h3:after {
+.home-block > h3:after,
+.choosen-title h3:after {
 	content: '';
 	position: absolute;
 	background: linear-gradient(to right, var(--accent-20), transparent);
@@ -407,14 +463,15 @@ body:has(#article-page) #article-page {
 	width: 0%;
 	transition: .3s;
 }
-.home-block:hover h3:after {
+.home-block:hover > h3:after,
+.choosen-title:hover h3:after {
 	width: 20%;
 }
-.home-block h3:hover {
+.home-block > h3:hover {
 	background: var(--dark-50);
 	cursor: pointer;
 }
-.home-block h3:before {
+.home-block > h3:before {
 	content: 'See All';
 	position: absolute;
 	right: 1rem;
@@ -425,6 +482,7 @@ body:has(#article-page) #article-page {
 }
 .titles-box {
 	display: flex;
+	flex-wrap: wrap;
 	gap: .5rem;
 }
 .titles-box > div {
