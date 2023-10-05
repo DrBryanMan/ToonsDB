@@ -1,0 +1,146 @@
+/* MAIN */
+/* CAROUSEL */
+.page-block.choosen-title {
+  padding: 0;
+  margin: 0 !important;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+.choosen-title .carousel {
+  max-height: 80vh;
+}
+.carousel-control-prev-icon:after,
+.carousel-control-next-icon:after {
+  content: "";
+}
+.carousel > button {
+  width: 5vw;
+}
+.carousel-caption {
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 5vw;
+  text-align: unset;
+}
+.carousel-caption span {
+  display: inline-block;
+  font-size: 200%;
+  background: var(--accent-light-50);
+  border-radius: var(--radius);
+  padding: 0.1rem 1rem 0.2rem;
+  margin-bottom: 1rem;
+}
+.carousel-caption img {
+  float: right;
+  width: 250px;
+  margin-left: 2rem;
+}
+.carousel-item > img {
+  filter: brightness(0.5);
+}
+.choosen-title .btn-tdb {
+  margin-right: 0.5rem;
+}
+
+#main-page .page-block {
+	margin: 1rem 5vw;
+}
+.page-block {
+  padding: 1rem;
+  border: 1px solid var(--accent-50);
+  border-radius: var(--radius);
+
+  color: var(--text);
+  background: var(--light-10);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 4px 2px var(--dark-50);
+
+  transition: 0.3s;
+}
+#main-page .page-block:hover {
+  box-shadow: 0 0 4px 1px var(--accent-80);
+}
+
+.titles-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.titles-box > div {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  padding: 5px;
+  width: min-content;
+  border-radius: var(--radius);
+  filter: drop-shadow(0 0 5px black);
+}
+.titles-box > div:hover {
+  background: var(--dark-20);
+}
+.titles-box > div > span {
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.titles-box > div > span:last-child {
+  font-size: 80%;
+  color: gray;
+}
+.page-block .titles-box img {
+  width: 180px;
+  border-radius: var(--radius);
+}
+.titles-box > div > div {
+  position: relative;
+}
+.titles-box > div .status-btn {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.titles-box > div .status-btn:not([active]) {
+  visibility: hidden;
+  opacity: 0;
+}
+.titles-box > div:hover .status-btn {
+  visibility: visible;
+  opacity: 1;
+}
+.titles-box > div .favorite {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  right: 5px;
+  top: 5px;
+  color: gray;
+  transition: 0.3s;
+}
+.titles-box > div .favorite[active] i {
+  display: unset;
+  filter: brightness(1);
+}
+.titles-box > div .favorite i {
+  position: absolute;
+  color: crimson;
+  filter: brightness(0.5);
+  transition: 0.3s;
+}
+.titles-box > div .favorite .fa-heart {
+  display: none;
+}
+.titles-box > div .favorite:hover i {
+  filter: brightness(1);
+}
+.titles-box > div .favorite:hover {
+  position: absolute;
+}
+.status-btn.add {
+  --hsl1: 0;
+  --hsl2: 0%;
+}

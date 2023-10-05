@@ -1,5 +1,17 @@
+.w-100pc {
+    width: 100%;
+}
+.ta-right {
+    text-align: right;
+}
 .d-flex {
     display: flex;
+}
+.d-grid {
+    display: grid;
+}
+.f-wrap {
+    flex-wrap: wrap;
 }
 .jc-center {
     justify-content: center;
@@ -9,6 +21,13 @@
 }
 .fdr-column {
     flex-direction: column;
+}
+
+.tdb-gap-1 {
+	gap: 1rem;
+}
+.cc-2 > div {
+	width: 50%;
 }
 
 /* * * * * * * */
